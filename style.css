@@ -38,6 +38,7 @@ a img {
     display: inline-block;
     vertical-align: middle;
     width: 100px;
+
     height: 100px;
     padding: 5px 5px 5px 5px;
 }
@@ -60,15 +61,16 @@ a span {
 .popup .popuptext {
    visibility: hidden;
    width: 120%;
-   height: 80%;
-   background-color: #555;
+   height: 500%;
+   font-size: 25px;
+   background-color: #F5DA81;
    color: #fff;
    text-align: center;
    border-radius: 6px;
-   padding: 8px 0;
+   padding: 20px 0;
    position: absolute;
    z-index: 1;
-   bottom: 50%;
+   bottom: -400%;
    left: 50%;
    margin-left: -60%;
 }
