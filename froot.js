@@ -1,7 +1,9 @@
-var recipeList = document.getElementsByTagName("LI");
+var recipeList = document.getElementById("recipeUL");
 function loadElements() {
-    var li = document.createElement("li");
-    var t = document. createTextNode("New Recipe");
-    li.appendChild(t);
-    document.getElementById("recipeUL");
-}
+    var newRecipe = document.createElement("li");
+    var newRecipeText = document.createTextNode("new recipe");
+    newRecipe.appendChild(newRecipeText);
+    recipeList.appendChild(newRecipe);
+} 
+
+loadElements();

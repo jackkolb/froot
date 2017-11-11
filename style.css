@@ -26,8 +26,8 @@
 	filter:alpha(opacity=80);
  	/* CSS3 standard */
  	opacity:0.8;
-	margin: 0 auto;
-        padding: 1px 15px;
+	margin: 15px;
+    padding: 1px 15px;
 }
 
 /* --------------------------- */
