@@ -6,7 +6,7 @@
 
 <title>Froot</title>
 <link rel="icon" type="image/jpg" href="icon_circle.jpg">
-<script type="text/javascript" src="froot.js"></script>
+
 
 </head>
 
@@ -21,14 +21,22 @@
     </div>
 
     <ul id="recipeUL">
-        <li>
+        <!-- <li>
             <div class="colorbox">
-                <div class="popup" onclick="myFunction()">Recipe
+                <div class="popup" onclick="myFunction()">
+                    <a>
+                        <img src="sample_food.jpg" />
+                        <span class="text">
+                            Riggitoni Marinara with Garlic and Fine Mushroom Sautee<br/>
+                            Original Cost: $15 New Cost: $7
+                        </span>
+                    </a>
                     <span class="popuptext" id="myPopup">Name</span>
                 </div>
             </div>
 
-        </li>
+        </li> -->
+        <li>thing</li>
     </ul>
 
     <!-- <div style="padding: 20px; margin-top: 30px; text-align: center; font-family: sans-serif"> -->
@@ -50,6 +58,7 @@
     <!-- </div> -->
 </body>
 
+<script type="text/javascript" src="froot.js"></script>
 
 <script>
 // When the user clicks on <div>, open the popup
@@ -57,6 +66,8 @@ function myFunction() {
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
 }
+
+
 </script>
 
 </html>
