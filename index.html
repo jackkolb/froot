@@ -2,22 +2,7 @@
 <html>
 
 <head>
-<style>
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.topnav a {
-  float: center;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="style.css" />
 
 <title>Froot</title>
 <link rel="icon" type="image/jpg" href="icon_circle.jpg">
@@ -27,22 +12,29 @@
 
 <body>
   <div class="topnav">
-  <a><img src="froot_logo.jpg" style="width:80%; height:auto;"></a>
+  <a><img src="froot_logo.png" style="width:10%; height:auto;"></a>
 </div>
 
     <div id="content">
-    <div style="padding: 20px;
-                margin-top: 30px;
-                background-color: white;
-                height: 500px;
-                text-align: center;
-                font-family: sans-serif">
-        <a href="projects.htm" style="text-decoration:none">
+    <div style="padding: 20px; margin-top: 30px; text-align: center; font-family: sans-serif">
+        <a>
             <div class="colorbox">
-                <p>Engineer</p>
+              <div class="popup" onclick="myFunction()">Recipe
+                  <span class="popuptext" id="myPopup">Name</span>
+              </div>
             </div>
         </a>
         <br>
     </div>
 </body>
+
+
+<script>
+// When the user clicks on <div>, open the popup
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+</script>
+
 </html>
