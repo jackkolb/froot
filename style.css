@@ -3,7 +3,7 @@
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #eccef5;
 }
 
 .topnav a {
@@ -21,7 +21,7 @@
 
 .colorbox {
 	background:lightgrey;
-	width:80%;
+	width:60%;
 	/* for IE */
 	filter:alpha(opacity=80);
  	/* CSS3 standard */
@@ -36,11 +36,14 @@ a {
 }
 a img {
     display: inline-block;
-    width: 70px;
-    height: 70px;
+    vertical-align: middle;
+    width: 100px;
+    height: 100px;
+    padding: 5px 5px 5px 5px;
 }
 a span {
     display: inline-block;
+    vertical-align: middle;
 }
 
 /* --------------------------- */
@@ -56,7 +59,7 @@ a span {
 /* The actual popup (appears on top) */
 .popup .popuptext {
    visibility: hidden;
-   width: 160px;
+   width: 60%;
    background-color: #555;
    color: #fff;
    text-align: center;
@@ -64,7 +67,7 @@ a span {
    padding: 8px 0;
    position: absolute;
    z-index: 1;
-   bottom: 125%;
+   bottom: 50%;
    left: 50%;
    margin-left: -80px;
 }
