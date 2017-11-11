@@ -5,61 +5,67 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 
 <title>Froot</title>
-<link rel="icon" type="image/jpg" href="icon_circle.jpg">
-
+<link rel="icon" type="image/jpg" href="orange_icon.png">
 
 </head>
 
 <body>
 
-    <!-- <ul id="recipeUL">
-        <li></li>
-    </ul>
-    <div class="recipebox"> -->
-    <div class="topnav">
-        <a><img src="froot_logo.png" style="width:10%; height:auto;"></a>
-    </div>
+<!-- Title Bar -->
+<div class="topnav">
+  <a><img src="froot_logo.png" style="width:10%; height:auto; float: middle"></a>
+</div>
 
+<!-- Content -->
+<div id="content">
+<div style="padding: 20px; margin-top: 30px; text-align: center; font-family: sans-serif; font-name:tahoma">
     <ul id="recipeUL">
-        <!-- <li>
-            <div class="colorbox">
-                <div class="popup" onclick="myFunction()">
-                    <a>
-                        <img src="sample_food.jpg" />
-                        <span class="text">
-                            Riggitoni Marinara with Garlic and Fine Mushroom Sautee<br/>
-                            Original Cost: $15 New Cost: $7
-                        </span>
-                    </a>
-                    <span class="popuptext" id="myPopup">Name</span>
-                </div>
-            </div>
-
-        </li> -->
-        <li>thing</li>
+        
     </ul>
 
-    <!-- <div style="padding: 20px; margin-top: 30px; text-align: center; font-family: sans-serif"> -->
-        <!-- <a> -->
-            <div class="colorbox">
-              <div class="popup" onclick="myFunction()">
-                <a>
-                    <img src="sample_food.jpg" />
-                    <span class="text">
-                        Riggitoni Marinara with Garlic and Fine Mushroom Sautee<br/>
-                        Original Cost: $15 New Cost: $7
-                    </span>
-                </a>
-                <span class="popuptext" id="myPopup">Name</span>
+    <a>
+        <div class="colorbox">
+          <div class="popup" onclick="myFunction()">
+            <a>
+              <br>
+                <img style="float:left" src="sample_food.jpg"> <br/><br/>
+                <span class="text"><font face="tahoma">
+                    <b>Riggitoni Marinara with Garlic and Fine Mushroom Sautee</b><br/>
+                    <p>Original Cost: $15 New Cost: $7</p>
+                </font>
+                </span>
+
+            </a>
+            </br>
+            <span class="popuptext" id="myPopup">
+              <p><b>Riggitoni Marinara with Garlic and Fine Mushroom Sautee</b></p>
+              <img src="sample_food.jpg" style="width: 30%; height: auto; float: left; padding: 50px">
+              <span class="text" style="padding: 25px">
+                <p align="left" style="padding: 0px"><b>Ingredients:</b></p>
+                <table style="width:60%; text-align: left">
+                   <tr><td>Savory Spaghetti</td></tr>
+                   <tr><td>Teeming Tomatoes</td></tr>
+                   <tr><td>Beautiful Basil</td></tr>
+                </table>
+              </span>
+              <br>
+                <b>Recipe</b><br>
               </div>
-            </div>
-        <!-- </a> -->
-        <br>
-    <!-- </div> -->
+            </span>
+          </div>
+        </div>
+    </a>
+<br>
+
+</div>
+
+<br>
+
 </body>
 
 <script type="text/javascript" src="froot.js"></script>
 
+<!-- Popup Javascript -->
 <script>
 // When the user clicks on <div>, open the popup
 function myFunction() {

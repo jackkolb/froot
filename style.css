@@ -3,7 +3,7 @@
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #eccef5;
 }
 
 .topnav a {
@@ -21,7 +21,7 @@
 
 .colorbox {
 	background:lightgrey;
-	width:80%;
+	width:60%;
 	/* for IE */
 	filter:alpha(opacity=80);
  	/* CSS3 standard */
@@ -36,11 +36,15 @@ a {
 }
 a img {
     display: inline-block;
-    width: 70px;
-    height: 70px;
+    vertical-align: middle;
+    width: 100px;
+
+    height: 100px;
+    padding: 5px 5px 5px 5px;
 }
 a span {
     display: inline-block;
+    vertical-align: middle;
 }
 
 /* --------------------------- */
@@ -56,17 +60,19 @@ a span {
 /* The actual popup (appears on top) */
 .popup .popuptext {
    visibility: hidden;
-   width: 160px;
-   background-color: #555;
+   width: 120%;
+   height: 500%;
+   font-size: 25px;
+   background-color: #F5DA81;
    color: #fff;
    text-align: center;
    border-radius: 6px;
-   padding: 8px 0;
+   padding: 20px 0;
    position: absolute;
    z-index: 1;
-   bottom: 125%;
+   bottom: -400%;
    left: 50%;
-   margin-left: -80px;
+   margin-left: -60%;
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
@@ -79,10 +85,10 @@ a span {
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
    from {opacity: 0;}
-   to {opacity: 1;}
+   to {opacity: .9;}
 }
 
 @keyframes fadeIn {
    from {opacity: 0;}
-   to {opacity:1 ;}
+   to {opacity: .9;}
 }
