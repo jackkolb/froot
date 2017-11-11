@@ -59,7 +59,8 @@ a span {
 /* The actual popup (appears on top) */
 .popup .popuptext {
    visibility: hidden;
-   width: 60%;
+   width: 120%;
+   height: 80%;
    background-color: #555;
    color: #fff;
    text-align: center;
@@ -69,7 +70,7 @@ a span {
    z-index: 1;
    bottom: 50%;
    left: 50%;
-   margin-left: -80px;
+   margin-left: -60%;
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
