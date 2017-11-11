@@ -30,6 +30,19 @@
         padding: 1px 15px;
 }
 
+a {
+    display: block;
+    text-decoration: none;
+}
+a img {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+}
+a span {
+    display: inline-block;
+}
+
 /* --------------------------- */
 /* Recipe Popup */
 
@@ -55,18 +68,6 @@
    left: 50%;
    margin-left: -80px;
 }
-
-/* Popup arrow */
-/*.popup .popuptext::after {
-   content: "";
-   position: absolute;
-   top: 100%;
-   left: 50%;
-   margin-left: -5px;
-   border-width: 5px;
-   border-style: solid;
-   border-color: #555 transparent transparent transparent;
-}*/
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
 .popup .show {
