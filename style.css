@@ -18,6 +18,13 @@
 
 /* --------------------------- */
 /* Recipe Tab */
+.recipebox {
+    padding: 20px; 
+    margin-top: 30px; 
+    text-align: center; 
+    font-family: sans-serif; 
+    font-name:tahoma";
+}
 
 .colorbox {
 	background:#A9D0F5;
