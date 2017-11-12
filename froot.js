@@ -30,6 +30,16 @@ function loadElements() {
     addElement(jsonArr);
 }
 
+function getIngredients(recipe) {
+    var ingredients = '';
+    var i;
+    for(i = 0; i < recipe.ingredients.length; i++) {
+        ingredients += '<li>' + recipe.ingredients[i].text + '</li>';
+    }
+    return ingredients;
+
+}
+
 function addElement(jsonArr) {
     if(recipeList == null) { 
         let recipeList = document.getElementById("recipeUL");
@@ -51,35 +61,42 @@ function addElement(jsonArr) {
         
         var newRecipeBox = document.createElement('div');
         newRecipeBox.setAttribute('class', 'recipebox');
-
-        var newHyperlink = document.createElement('a');
         
         var newColorbox = document.createElement('div');
         newColorbox.setAttribute('class', 'colorbox');
-
+        
         var newPopup = document.createElement('div');
         newPopup.setAttribute('class', 'popup');
-        newPopup.setAttribute('onclick', 'myFunction()');
+        newPopup.setAttribute('onclick', 'popupFunction()');
 
-        var newHyperlink1 = document.createElement('a');
+        var newHyperlink = document.createElement('a');
+        var hyperInnerHTML = '<br/><!-- INSERT IMAGE HERE, SAMPLE BELOW --><img style="float:left" src="' + newRec.imageUrl + '"/><br/><br/><span class="text"><font  size=6px color="ffffff"><!-- INSERT NAME HERE, SAMPLE BELOW -->' + newRec.name + '<br><!-- INSERT SAVINGS HERE, SAMPLE BELOW -->Savings: $7</font></span>';
+        newHyperlink.innerHTML = hyperInnerHTML;
         
+        var newPopupSpan = document.createElement('span');
+        newPopupSpan.setAttribute('class', 'popuptext');
+        newPopupSpan.setAttribute('id', 'myPopup');
+        var popupInnerHTML = '<!-- INSERT NAME HERE (AGAIN), SAMPLE BELOW --><p><b>' + newRec.name + '</b></p><!-- INSERT IMAGE HERE, SAMPLE BELOW --><img src="' + newRec.imageUrl + '" class="recipeimage"  /><p align="left" style="padding: 0px"><b>Ingredients:</b></p><!-- INSERT RECIPE LIST AS BLOCK HERE, SAMPLE BELOW (Not in this commit) --><ul style="text-align: left">' + getIngredients(newRec) + '</ul><!-- INSERT RECIPE LINK HERE, SAMPLE BELOW --><a href="' + newRec.url + '" class="recipelink"><img class="recipelabel" src="recipe_image.png"/></a><br/>';
+        newPopupSpan.innerHTML = popupInnerHTML;
 
-
-        newPopup.innerHTML = '<a><br><img style="float:left" src="' + newRec.imageUrl + '"><br/><br/><span class="text"><font face="tahoma"><!-- INSERT NAME HERE, SAMPLE BELOW --><b>' + newRec.name +'</b><br/><!-- INSERT SAVINGS HERE, SAMPLE BELOW --><p>Original Cost: $15 New Cost: $7</p></font></span></a><br>' 
-            + '';
-
-
-        // var new
-        newPopup.appendChild(newHyperlink1);
+        newPopup.appendChild(newHyperlink);
+        newPopup.innerHTML += "</br>";
+        newPopup.appendChild(newPopupSpan);
         newColorbox.appendChild(newPopup);
-        newHyperlink.appendChild(newColorbox);
-        newRecipeBox.appendChild(newHyperlink);
+        newRecipeBox.appendChild(newColorbox);
         newRecipe.appendChild(newRecipeBox);
+        
 
         if(recipeList != null) {
             recipeList.append(newRecipe);
         }
     }
+}
+
+// When the user clicks on <div>, open the popup
+function popupFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
 }
 
 loadElements();
