@@ -41,10 +41,10 @@ function getIngredients(recipe) {
 }
 
 function addElement(jsonArr) {
-    if(recipeList == null) { 
+    if(recipeList == null) {
         let recipeList = document.getElementById("recipeUL");
     }
-    
+
     while(recipeList != null && recipeList.firstChild) {
         recipeList.removeChild(recipeList.firstChild);
     }
@@ -58,13 +58,13 @@ function addElement(jsonArr) {
         recipes.push(newRec);
 
         var newRecipe = document.createElement('li');
-        
+
         var newRecipeBox = document.createElement('div');
         newRecipeBox.setAttribute('class', 'recipebox');
-        
+
         var newColorbox = document.createElement('div');
         newColorbox.setAttribute('class', 'colorbox');
-        
+
         var newPopup = document.createElement('div');
         newPopup.setAttribute('class', 'popup');
         newPopup.setAttribute('onclick', 'popupFunction()');
@@ -72,7 +72,7 @@ function addElement(jsonArr) {
         var newHyperlink = document.createElement('a');
         var hyperInnerHTML = '<br/><!-- INSERT IMAGE HERE, SAMPLE BELOW --><img style="float:left" src="' + newRec.imageUrl + '"/><br/><br/><span class="text"><font  size=6px color="ffffff"><!-- INSERT NAME HERE, SAMPLE BELOW -->' + newRec.name + '<br><!-- INSERT SAVINGS HERE, SAMPLE BELOW -->Savings: $7</font></span>';
         newHyperlink.innerHTML = hyperInnerHTML;
-        
+
         var newPopupSpan = document.createElement('span');
         newPopupSpan.setAttribute('class', 'popuptext');
         newPopupSpan.setAttribute('id', 'myPopup');
@@ -85,7 +85,7 @@ function addElement(jsonArr) {
         newColorbox.appendChild(newPopup);
         newRecipeBox.appendChild(newColorbox);
         newRecipe.appendChild(newRecipeBox);
-        
+
 
         if(recipeList != null) {
             recipeList.append(newRecipe);
@@ -99,5 +99,5 @@ function popupFunction() {
     popup.classList.toggle("show");
 }
 
-loadElements();
 
+loadElements();

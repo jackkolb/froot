@@ -66,6 +66,32 @@ a span {
     font-name:"tahoma"
 }
 
+
+
+
+
+
+#content div.slide-laws {
+ float: right;
+ width: 30em;
+ line-height: 1.3em;
+ font-size: .9em;
+}
+#content div.slide-laws a.toggle-slide-laws {
+ float: right;
+}
+#content div.slide-laws div {
+ text-align: left;
+ float: left;
+ margin-bottom: 4px;
+}
+
+
+
+
+
+
+
 /* Popup container */
 .popup {
    position: relative;
