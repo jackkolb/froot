@@ -11,7 +11,7 @@
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 0px 0px;
   text-decoration: none;
   font-size: 17px;
 }
@@ -28,7 +28,7 @@
 
 .colorbox {
 	background:lightgrey;
-	width:60%;
+	width:90%;
 	/* for IE */
 	filter:alpha(opacity=80);
  	/* CSS3 standard */
@@ -41,6 +41,7 @@ a {
     display: block;
     text-decoration: none;
 }
+
 a img {
     display: inline-block;
     vertical-align: middle;
@@ -49,6 +50,7 @@ a img {
     height: 100px;
     padding: 5px 5px 5px 5px;
 }
+
 a span {
     display: inline-block;
     vertical-align: middle;
@@ -58,11 +60,11 @@ a span {
 /* Recipe Popup */
 
 /* order the list as a block */
-blockli {
+/*li {
     display: block;
     width: 25%;
     float: left;
-}
+}*/
 
 /* Popup container */
 .popup {
@@ -74,8 +76,8 @@ blockli {
 /* The actual popup (appears on top) */
 .popup .popuptext {
    visibility: hidden;
-   width: 120%;
-   height: 500%;
+   width: 110%;
+   height: auto;
    font-size: 25px;
    background-color: #F5DA81;
    color: #fff;
@@ -84,9 +86,9 @@ blockli {
    padding: 20px 0;
    position: absolute;
    z-index: 1;
-   bottom: -400%;
+   bottom: -200%;
    left: 50%;
-   margin-left: -60%;
+   margin-left: -55%;
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
