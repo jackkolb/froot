@@ -19,11 +19,11 @@
 /* --------------------------- */
 /* Recipe Tab */
 .recipebox {
-    padding: 20px; 
-    margin-top: 30px; 
-    text-align: center; 
-    font-family: sans-serif; 
-    font-name:tahoma";
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+    font-family: sans-serif;
+    font-name:"tahoma";
 }
 
 .colorbox {
@@ -59,11 +59,11 @@ a span {
 /* --------------------------- */
 /* Recipe Popup */
 .recipebox {
-    padding: 20px; 
-    margin-top: 30px; 
-    text-align: center; 
-    font-family: sans-serif; 
-    font-name:tahoma";
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+    font-family: sans-serif;
+    font-name:"tahoma"
 }
 
 /* Popup container */
@@ -107,12 +107,12 @@ a span {
 .recipeimage {
     width: 30%;
     height: auto;
-    float: left; 
+    float: left;
     padding: 50px;
 }
 
 .recipelabel {
-    width:100%; 
+    width:100%;
     height: auto;
     padding: 0px 0px 0px 0px;
 }

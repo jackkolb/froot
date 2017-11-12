@@ -1,0 +1,13 @@
+{
+  "name": "Greek Style Yogurt" { "discount": 1 },
+  "name": "Cottage Cheese" { "discount": 1 },
+  "name": "Skippy Peanut Butter" { "discount": 0.5 },
+  "name": "Bouillon" { "discount": 1 },
+  "name": "Pineapple Sliced, chunked, crushed in syrup or juice" { "discount": 0.5 },
+  "name": "Gluten Free Pasta" { "discount": 0.5 },
+  "name": "Shredded Cheese" { "discount": 1 },
+  "name": "Captain Morgan" { "discount": 2 },
+  "name": "Smirnoff Vodka" { "discount": 2 },
+  "name": "Kikkomen Soy Sauce" { "discount": 0.5 },
+  "name": "Teriyaki Sauce" { "discount": 0.5 }
+}
