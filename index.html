@@ -4,20 +4,23 @@
 <head>
 <link rel="stylesheet" type="text/css" href="style.css" />
 
+
 <title>Froot</title>
 <link rel="icon" type="image/jpg" href="orange_icon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.css">
 
 </head>
 
 <body>
 
 <!-- Title Bar -->
+<button onclick="modal('fdgdfgf')">Test</button>
 <div class="topnav" style="width: 100%;">
   <a><img src="froot_logo.png" style="width:20%; height:auto; float: middle"></a>
 </div>
 
 <!-- Content -->
-<div id="content">
+<div id="content" style="position: relative; z-index:0">
 <ul id="recipeUL">
     <li>
 
@@ -25,9 +28,17 @@
     </li>
 </ul>
 <br>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.js" charset="utf-8"></script>
+<script type="text/javascript" src="froot.js"></script>
+<script type="text/javascript">
+function modal(body) {
+  swal(
+    body
+  )
+}
 
+</script>
 </body>
 
-<script type="text/javascript" src="froot.js"></script>
 
 </html>
