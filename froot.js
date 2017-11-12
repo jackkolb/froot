@@ -70,7 +70,7 @@ function addElement(jsonArr) {
         newPopup.setAttribute('onclick', 'popupFunction(this,' + i + ')');
 
         var newHyperlink = document.createElement('a');
-        var hyperInnerHTML = '<br/><!-- INSERT IMAGE HERE, SAMPLE BELOW --><img style="float:left" src="' + newRec.imageUrl + '"/><br/><br/><span class="text"><font  size=6px color="ffffff"><!-- INSERT NAME HERE, SAMPLE BELOW -->' + newRec.name + '<br><!-- INSERT SAVINGS HERE, SAMPLE BELOW -->Savings: $7</font></span>';
+        var hyperInnerHTML = '<br/><!-- INSERT IMAGE HERE, SAMPLE BELOW --><img style="float:left" src="' + newRec.imageUrl + '"/><br/><br/><span class="text"><font  size=6px color="ffffff"><!-- INSERT NAME HERE, SAMPLE BELOW -->' + newRec.name + '<br><!-- INSERT SAVINGS HERE, SAMPLE BELOW -->Savings: $'  + parseInt(Math.random() * 4 + 1) + '</font></span>';
         newHyperlink.innerHTML = hyperInnerHTML;
 
         // var newPopupSpan = document.createElement('span');
@@ -107,8 +107,6 @@ function popupFunction(obj, idx) {
 
 function modal(body) {
     swal(body)
-        $(".swal2-modal").css('background-color', '#F5DA81');//Optional changes the color of the sweetalert 
-    $(".swal2-container.in").css('background-color', 'rgba(43, 165, 137, 0.45)');//changes the color of the overlay
 }
 
 loadElements();
