@@ -24,10 +24,10 @@ xhr.onreadystatechange = function() {
 }
 
 function loadElements() {
-    // xhr.open("GET", getRecipesURL);
-    // xhr.send();
-    var jsonArr = JSON.parse(responsetxt);
-    addElement(jsonArr);
+    xhr.open("GET", getRecipesURL);
+    xhr.send();
+    // var jsonArr = JSON.parse(responsetxt);
+    // addElement(jsonArr);
 }
 
 function getIngredients(recipe) {
