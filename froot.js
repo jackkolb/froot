@@ -5,7 +5,9 @@ function Recipe(name, imageUrl, url, ingredients) {
     this.ingredients = ingredients;
 }
 
-let recipeList = document.getElementById("recipeUL");
+var RecipeElement = document.registerElement('recipe-element');
+
+var recipeList = document.getElementById("recipeUL");
 var recipes = [];
 
 var xhr = new XMLHttpRequest();
@@ -22,10 +24,10 @@ xhr.onreadystatechange = function() {
 }
 
 function loadElements() {
-    xhr.open("GET", getRecipesURL);
-    xhr.send();
-    // var jsonArr = JSON.parse(responsetxt);
-    // addElement(jsonArr);
+    // xhr.open("GET", getRecipesURL);
+    // xhr.send();
+    var jsonArr = JSON.parse(responsetxt);
+    addElement(jsonArr);
 }
 
 function addElement(jsonArr) {
@@ -45,9 +47,34 @@ function addElement(jsonArr) {
         var newRec = new Recipe(jsonRecipe.label, jsonRecipe.image, jsonRecipe.url, jsonRecipe.ingredients);
         recipes.push(newRec);
 
-        let newRecipe = document.createElement("li");
-        let newRecipeText = document.createTextNode(newRec.name);
-        newRecipe.appendChild(newRecipeText);
+        var newRecipe = document.createElement('li');
+        
+        var newRecipeBox = document.createElement('div');
+        newRecipeBox.setAttribute('class', 'recipebox');
+
+        var newHyperlink = document.createElement('a');
+        
+        var newColorbox = document.createElement('div');
+        newColorbox.setAttribute('class', 'colorbox');
+
+        var newPopup = document.createElement('div');
+        newPopup.setAttribute('class', 'popup');
+        newPopup.setAttribute('onclick', 'myFunction()');
+
+        var newHyperlink1 = document.createElement('a');
+        
+
+
+        newPopup.innerHTML = '<a><br><img style="float:left" src="' + newRec.imageUrl + '"><br/><br/><span class="text"><font face="tahoma"><!-- INSERT NAME HERE, SAMPLE BELOW --><b>' + newRec.name +'</b><br/><!-- INSERT SAVINGS HERE, SAMPLE BELOW --><p>Original Cost: $15 New Cost: $7</p></font></span></a><br>' 
+            + '';
+
+
+        // var new
+        newPopup.appendChild(newHyperlink1);
+        newColorbox.appendChild(newPopup);
+        newHyperlink.appendChild(newColorbox);
+        newRecipeBox.appendChild(newHyperlink);
+        newRecipe.appendChild(newRecipeBox);
 
         if(recipeList != null) {
             recipeList.append(newRecipe);

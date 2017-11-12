@@ -18,6 +18,13 @@
 
 /* --------------------------- */
 /* Recipe Tab */
+.recipebox {
+    padding: 20px; 
+    margin-top: 30px; 
+    text-align: center; 
+    font-family: sans-serif; 
+    font-name:tahoma";
+}
 
 .colorbox {
 	background:lightgrey;
@@ -51,7 +58,7 @@ a span {
 /* Recipe Popup */
 
 /* order the list as a block */
-li {
+blockli {
     display: block;
     width: 25%;
     float: left;
