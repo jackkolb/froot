@@ -73,15 +73,15 @@ function addElement(jsonArr) {
         var hyperInnerHTML = '<br/><!-- INSERT IMAGE HERE, SAMPLE BELOW --><img style="float:left" src="' + newRec.imageUrl + '"/><br/><br/><span class="text"><font  size=6px color="ffffff"><!-- INSERT NAME HERE, SAMPLE BELOW -->' + newRec.name + '<br><!-- INSERT SAVINGS HERE, SAMPLE BELOW -->Savings: $7</font></span>';
         newHyperlink.innerHTML = hyperInnerHTML;
 
-        var newPopupSpan = document.createElement('span');
-        newPopupSpan.setAttribute('class', 'popuptext');
-        newPopupSpan.setAttribute('id', 'myPopup' + i);
-        var popupInnerHTML = '<!-- INSERT NAME HERE (AGAIN), SAMPLE BELOW --><p><b>' + newRec.name + '</b></p><!-- INSERT IMAGE HERE, SAMPLE BELOW --><img src="' + newRec.imageUrl + '" class="recipeimage"  /><p align="left" style="padding: 0px"><b>Ingredients:</b></p><!-- INSERT RECIPE LIST AS BLOCK HERE, SAMPLE BELOW (Not in this commit) --><ul style="text-align: left">' + getIngredients(newRec) + '</ul><!-- INSERT RECIPE LINK HERE, SAMPLE BELOW --><a href="' + newRec.url + '" class="recipelink"><img class="recipelabel" src="recipe_image.png"/></a><br/>';
-        newPopupSpan.innerHTML = popupInnerHTML;
+        // var newPopupSpan = document.createElement('span');
+        // newPopupSpan.setAttribute('class', 'popuptext');
+        // newPopupSpan.setAttribute('id', 'myPopup' + i);
+        // var popupInnerHTML = '<span class="popuptext" id="myPopup' + i + '"><!-- INSERT NAME HERE (AGAIN), SAMPLE BELOW --><p><b>' + newRec.name + '</b></p><!-- INSERT IMAGE HERE, SAMPLE BELOW --><img src="' + newRec.imageUrl + '" class="recipeimage"  /><p align="left" style="padding: 0px"><b>Ingredients:</b></p><!-- INSERT RECIPE LIST AS BLOCK HERE, SAMPLE BELOW (Not in this commit) --><ul style="text-align: left">' + getIngredients(newRec) + '</ul><!-- INSERT RECIPE LINK HERE, SAMPLE BELOW --><a href="' + newRec.url + '" class="recipelink"><img class="recipelabel" src="recipe_image.png"/></a><br/></span>';
+        // newPopupSpan.innerHTML = popupInnerHTML;
 
         newPopup.appendChild(newHyperlink);
         newPopup.innerHTML += "</br>";
-        newPopup.appendChild(newPopupSpan);
+        // newPopup.appendChild(newPopupSpan);
         newColorbox.appendChild(newPopup);
         newRecipeBox.appendChild(newColorbox);
         newRecipe.appendChild(newRecipeBox);
@@ -95,9 +95,20 @@ function addElement(jsonArr) {
 
 // When the user clicks on <div>, open the popup
 function popupFunction(obj, idx) {
-    var popup = document.getElementById("myPopup" + idx);
-    popup.classList.toggle("show");
+    var newRec = recipes[idx];
+    var popupInnerHTML = '<span class="popuptext" id="myPopup' + idx + '"><!-- INSERT NAME HERE (AGAIN), SAMPLE BELOW --><p><b>' + newRec.name + '</b></p><!-- INSERT IMAGE HERE, SAMPLE BELOW --><img src="' + newRec.imageUrl + '" class="recipeimage"  /><p align="left" style="padding: 0px"><b>Ingredients:</b></p><!-- INSERT RECIPE LIST AS BLOCK HERE, SAMPLE BELOW (Not in this commit) --><ul style="text-align: left">' + getIngredients(newRec) + '</ul><!-- INSERT RECIPE LINK HERE, SAMPLE BELOW --><a href="' + newRec.url + '" class="recipelink"><img class="recipelabel" src="recipe_image.png"/></a><br/></span>';
+    modal(popupInnerHTML);
+
+
+
+    // var popup = document.getElementById("myPopup" + idx);
+    // popup.classList.toggle("show");
 }
 
+function modal(body) {
+    swal(body)
+        $(".swal2-modal").css('background-color', '#F5DA81');//Optional changes the color of the sweetalert 
+    $(".swal2-container.in").css('background-color', 'rgba(43, 165, 137, 0.45)');//changes the color of the overlay
+}
 
 loadElements();
