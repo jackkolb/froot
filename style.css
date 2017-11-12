@@ -27,7 +27,7 @@
 }
 
 .colorbox {
-	background:lightgrey;
+	background:#A9D0F5;
 	width:90%;
 	/* for IE */
 	filter:alpha(opacity=80);
@@ -58,13 +58,6 @@ a span {
 
 /* --------------------------- */
 /* Recipe Popup */
-
-/* order the list as a block */
-/*li {
-    display: block;
-    width: 25%;
-    float: left;
-}*/
 
 /* Popup container */
 .popup {
