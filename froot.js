@@ -67,7 +67,7 @@ function addElement(jsonArr) {
         
         var newPopup = document.createElement('div');
         newPopup.setAttribute('class', 'popup');
-        newPopup.setAttribute('onclick', 'popupFunction()');
+        newPopup.setAttribute('onclick', 'popupFunction(this,' + i + ')');
 
         var newHyperlink = document.createElement('a');
         var hyperInnerHTML = '<br/><!-- INSERT IMAGE HERE, SAMPLE BELOW --><img style="float:left" src="' + newRec.imageUrl + '"/><br/><br/><span class="text"><font  size=6px color="ffffff"><!-- INSERT NAME HERE, SAMPLE BELOW -->' + newRec.name + '<br><!-- INSERT SAVINGS HERE, SAMPLE BELOW -->Savings: $7</font></span>';
@@ -75,7 +75,7 @@ function addElement(jsonArr) {
         
         var newPopupSpan = document.createElement('span');
         newPopupSpan.setAttribute('class', 'popuptext');
-        newPopupSpan.setAttribute('id', 'myPopup');
+        newPopupSpan.setAttribute('id', 'myPopup' + i);
         var popupInnerHTML = '<!-- INSERT NAME HERE (AGAIN), SAMPLE BELOW --><p><b>' + newRec.name + '</b></p><!-- INSERT IMAGE HERE, SAMPLE BELOW --><img src="' + newRec.imageUrl + '" class="recipeimage"  /><p align="left" style="padding: 0px"><b>Ingredients:</b></p><!-- INSERT RECIPE LIST AS BLOCK HERE, SAMPLE BELOW (Not in this commit) --><ul style="text-align: left">' + getIngredients(newRec) + '</ul><!-- INSERT RECIPE LINK HERE, SAMPLE BELOW --><a href="' + newRec.url + '" class="recipelink"><img class="recipelabel" src="recipe_image.png"/></a><br/>';
         newPopupSpan.innerHTML = popupInnerHTML;
 
@@ -94,8 +94,8 @@ function addElement(jsonArr) {
 }
 
 // When the user clicks on <div>, open the popup
-function popupFunction() {
-    var popup = document.getElementById("myPopup");
+function popupFunction(obj, idx) {
+    var popup = document.getElementById("myPopup" + idx);
     popup.classList.toggle("show");
 }
 
