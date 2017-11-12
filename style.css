@@ -58,6 +58,13 @@ a span {
 
 /* --------------------------- */
 /* Recipe Popup */
+.recipebox {
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+    font-family: sans-serif;
+    font-name:"tahoma"
+}
 
 /* Popup container */
 .popup {
@@ -91,6 +98,24 @@ a span {
    animation: fadeIn .5s
 }
 
+.recipelink {
+    height:initial;
+    width:initial;
+    display: block;
+}
+
+.recipeimage {
+    width: 30%;
+    height: auto;
+    float: left;
+    padding: 50px;
+}
+
+.recipelabel {
+    width:100%;
+    height: auto;
+    padding: 0px 0px 0px 0px;
+}
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
    from {opacity: 0;}
