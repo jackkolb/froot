@@ -26,11 +26,12 @@
               <br/>
               <!-- INSERT IMAGE HERE, SAMPLE BELOW -->
               <img style="float:left" src="sample_food.jpg" /> <br/><br/>
-                <span class="text"><font face="tahoma" color="ffffff">
+                <span class="text"><font  size=6px color="ffffff">
                     <!-- INSERT NAME HERE, SAMPLE BELOW -->
-                    <p><b>Riggitoni Marinara with Garlic and Fine Mushroom Sautee</b></p>
+                    Riggitoni Marinara
+                    <br>
                     <!-- INSERT SAVINGS HERE, SAMPLE BELOW -->
-                    <p>Savings: $7</p>
+                    Savings: $7
                 </font>
                 </span>
 
@@ -75,6 +76,11 @@ function myFunction() {
     popup.classList.toggle("show");
 }
 
+$(function() {
+    while( $('#fitin div').height() > $('#fitin').height() ) {
+        $('#fitin div').css('font-size', (parseInt($('#fitin div').css('font-size')) - 1) + "px" );
+    }
+});
 
 </script>
 

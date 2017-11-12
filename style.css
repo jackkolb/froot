@@ -19,6 +19,14 @@
 /* --------------------------- */
 /* Recipe Tab */
 
+#fitin {
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+    overflow: hidden;
+    font-size: 1em;
+}
+
 .colorbox {
 	background:#A9D0F5;
 	width:90%;
